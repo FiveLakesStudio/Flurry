@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.3.1"/>
-<title>Flurry iOS 4.2.3: Flurry Class Reference</title>
+<title>Flurry iOS 4.3.2: Flurry Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Flurry iOS 4.2.3
+   <div id="projectname">Flurry iOS 4.3.2
    </div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -105,7 +105,7 @@ Class Methods</h2></td></tr>
 <tr class="memdesc:a0033dc0a7acc00c9a10b19655be47aac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start a <a class="el" href="interface_flurry.html">Flurry</a> session for the project denoted by <code>apiKey</code>.  <a href="#a0033dc0a7acc00c9a10b19655be47aac">More...</a><br/></td></tr>
 <tr class="separator:a0033dc0a7acc00c9a10b19655be47aac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57e18dc7c992272e3dc89e7f3bc853f4"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_flurry.html#a57e18dc7c992272e3dc89e7f3bc853f4">pauseBackgroundSession</a></td></tr>
-<tr class="memdesc:a57e18dc7c992272e3dc89e7f3bc853f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pauses a <a class="el" href="interface_flurry.html">Flurry</a> session.  <a href="#a57e18dc7c992272e3dc89e7f3bc853f4">More...</a><br/></td></tr>
+<tr class="memdesc:a57e18dc7c992272e3dc89e7f3bc853f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pauses a <a class="el" href="interface_flurry.html">Flurry</a> session left running in background.  <a href="#a57e18dc7c992272e3dc89e7f3bc853f4">More...</a><br/></td></tr>
 <tr class="separator:a57e18dc7c992272e3dc89e7f3bc853f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Pre-Session Calls</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Optional sdk settings that should be called before start session. </p>
@@ -282,7 +282,7 @@ Class Methods</h2></td></tr>
 
 <p>Retrieves the <a class="el" href="interface_flurry.html">Flurry</a> Agent Build Version. </p>
 <dl class="section since"><dt>Since</dt><dd>2.7</dd></dl>
-<p>This is an optional method that retrieves the <a class="el" href="interface_flurry.html">Flurry</a> Agent Version and Build Version the app is running under. It is most often used if reporting an unexpected behavior of the SDK to <a href="#" onclick="location.href='mai'+'lto:'+'iph'+'on'+'esu'+'pp'+'ort'+'@f'+'lur'+'ry'+'.co'+'m'; return false;">Flurry Support</a></p>
+<p>This is an optional method that retrieves the <a class="el" href="interface_flurry.html">Flurry</a> Agent Version the app is running under. It is most often used if reporting an unexpected behavior of the SDK to <a href="#" onclick="location.href='mai'+'lto:'+'iph'+'on'+'esu'+'pp'+'ort'+'@f'+'lur'+'ry'+'.co'+'m'; return false;">Flurry Support</a></p>
 <dl class="section note"><dt>Note</dt><dd>This method must be called prior to invoking <a class="el" href="interface_flurry.html#aeadfa23545c392ffd46db448b6a95809" title="Start a Flurry session for the project denoted by apiKey.">startSession:</a>. <br/>
  FAQ for the iPhone SDK is located at <a href="http://wiki.flurry.com/index.php?title=IPhone_FAQ">Support Center - iPhone FAQ</a>.</dd></dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="interface_flurry.html#ab717465e705b23c80253dddae321f5bc" title="Generates debug logs to console.">+ setLogLevel:</a> for information on how to view debugging information on your console.</dd></dl>
@@ -671,16 +671,14 @@ Class Methods</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Pauses a <a class="el" href="interface_flurry.html">Flurry</a> session. </p>
+<p>Pauses a <a class="el" href="interface_flurry.html">Flurry</a> session left running in background. </p>
 <dl class="section since"><dt>Since</dt><dd>4.2.2</dd></dl>
-<p>This method is useful in case of <a class="el" href="interface_flurry.html#a936cba06051ba7a149b988a434d2a05c" title="Set session to support background execution.">setBackgroundSessionEnabled:</a> set to YES. It can be called when application finished all background tasks (such as playing music) to pause session. If the app is resumed before time specified in <a class="el" href="interface_flurry.html#a1b79d4d804074f4b66f3434d9318ceee" title="Set the timeout for expiring a Flurry session.">setSessionContinueSeconds:</a>, the session will continue, otherwise a new session will begin.</p>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="interface_flurry.html#a1b79d4d804074f4b66f3434d9318ceee" title="Set the timeout for expiring a Flurry session.">+ setSessionContinueSeconds:</a> for details on setting a custom session timeout. </dd>
-<dd>
-<a class="el" href="interface_flurry.html#a936cba06051ba7a149b988a434d2a05c" title="Set session to support background execution.">+ setBackgroundSessionEnabled:</a> for details on setting a custom behaviour on resigning activity.</dd></dl>
+<p>This method should be used in case of <a class="el" href="interface_flurry.html#a936cba06051ba7a149b988a434d2a05c" title="Set session to support background execution.">setBackgroundSessionEnabled:</a> set to YES. It can be called when application finished all background tasks (such as playing music) to pause session.</p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="interface_flurry.html#a936cba06051ba7a149b988a434d2a05c" title="Set session to support background execution.">+ setBackgroundSessionEnabled:</a> for details on setting a custom behaviour on resigning activity.</dd></dl>
 <div class="fragment"><div class="line">   - (void)allBackgroundTasksFinished</div>
 <div class="line">{</div>
 <div class="line"><span class="comment">// ....</span></div>
-<div class="line">[<a class="code" href="interface_flurry.html">Flurry</a> <a class="code" href="interface_flurry.html#a57e18dc7c992272e3dc89e7f3bc853f4" title="Pauses a Flurry session.">pauseBackgroundSession</a>];</div>
+<div class="line">[<a class="code" href="interface_flurry.html">Flurry</a> <a class="code" href="interface_flurry.html#a57e18dc7c992272e3dc89e7f3bc853f4" title="Pauses a Flurry session left running in background.">pauseBackgroundSession</a>];</div>
 <div class="line"><span class="comment">// ....</span></div>
 <div class="line">}</div>
 </div><!-- fragment --> 
@@ -757,10 +755,12 @@ Class Methods</h2></td></tr>
 
 <p>Set session to support background execution. </p>
 <dl class="section since"><dt>Since</dt><dd>4.2.2</dd></dl>
-<p>Use this method finish session data when the app is paused. The default value is taken looking at the UIBackgroundModes of application's Info.plist. If UIBackgroundModes array is empty, equals <code>NO</code>, otherwise <code>YES</code>.</p>
+<p>Use this method to enable reporting of errors and events when application is running in backgorund (such applications have UIBackgroundModes in Info.plist). You should call <a class="el" href="interface_flurry.html#a57e18dc7c992272e3dc89e7f3bc853f4" title="Pauses a Flurry session left running in background.">pauseBackgroundSession</a> when appropriate in background mode to pause the session (for example when played song completed in background)</p>
+<p>Default value is <code>NO</code> </p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="interface_flurry.html#a57e18dc7c992272e3dc89e7f3bc853f4" title="Pauses a Flurry session left running in background.">+ pauseBackgroundSession</a> for details</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">setBackgroundSessionEnabled</td><td>NO to finish on resigning active, YES to omit finishing. </td></tr>
+    <tr><td class="paramname">setBackgroundSessionEnabled</td><td>YES to enbale background support and continue log events and errors for running session. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1229,7 +1229,7 @@ Class Methods</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/Users/Akshay/Downloads/Flurry.Release.4.2.3/Flurry/<a class="el" href="_flurry_8h_source.html">Flurry.h</a></li>
+<li>/Users/Akshay/Downloads/Flurry.Release.4.3.2/Flurry/<a class="el" href="_flurry_8h_source.html">Flurry.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
